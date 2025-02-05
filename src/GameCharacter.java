@@ -21,6 +21,16 @@ public abstract class GameCharacter {
         this.health = health;
     }
 
+    public void damage(int damage) {
+        setHealth(getHealth() - damage);
+    }
+
+    public void levelUp() {
+        setLevel(getLevel() + 1);
+    }
+
+    public abstract void attack();
+
     public String getName() {
         return name;
     }
