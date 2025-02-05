@@ -12,4 +12,18 @@ public class Warrior extends GameCharacter{
     public void attack() {
         System.out.println("Attacking with sword!");
     }
+
+    @Override
+    public void damage(int damage) {
+        if (shield()) {
+            super.damage(damage / 2);
+        }
+    }
+
+    public boolean shield(boolean state) {
+        return state;
+    }
+    public boolean shield() {
+        return false;
+    }
 }
