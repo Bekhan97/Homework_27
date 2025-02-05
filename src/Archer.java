@@ -10,6 +10,11 @@ public class Archer extends GameCharacter {
 
     @Override
     public void attack() {
-        System.out.println("Attacking with arrows!");
+        System.out.println(super.getName() + " Attacking with arrows!");
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Name: %s, Level: %d, Health: %.1f",getName(),getLevel(),getHealth());
     }
 }

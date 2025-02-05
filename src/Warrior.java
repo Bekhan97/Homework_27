@@ -1,4 +1,4 @@
-public class Warrior extends GameCharacter{
+public class Warrior extends GameCharacter {
 
     public Warrior(String name) {
         super(name);
@@ -10,20 +10,11 @@ public class Warrior extends GameCharacter{
 
     @Override
     public void attack() {
-        System.out.println("Attacking with sword!");
+        System.out.println(super.getName() + " Attacking with sword!");
     }
 
     @Override
-    public void damage(int damage) {
-        if (shield()) {
-            super.damage(damage / 2);
-        }
-    }
-
-    public boolean shield(boolean state) {
-        return state;
-    }
-    public boolean shield() {
-        return false;
+    public String toString() {
+        return String.format("Name: %s, Level: %d, Health: %.1f", getName(), getLevel(), getHealth());
     }
 }

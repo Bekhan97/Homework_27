@@ -9,6 +9,11 @@ public class Mage extends GameCharacter {
 
     @Override
     public void attack() {
-        System.out.println("Magical banana!");
+        System.out.println(super.getName() + " attacking with Magical banana!");
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Name: %s, Level: %d, Health: %.1f", getName(), getLevel(), getHealth());
     }
 }

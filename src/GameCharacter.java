@@ -44,10 +44,16 @@ public abstract class GameCharacter {
     }
 
     public void setLevel(int level) {
+        if (level < 0 || level > 5) {
+            throw new IllegalArgumentException();
+        }
         this.level = level;
     }
 
     public void setHealth(double health) {
+        if (health < 0 || health > 100) {
+            throw new IllegalArgumentException();
+        }
         this.health = health;
     }
 
