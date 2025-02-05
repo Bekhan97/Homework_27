@@ -34,7 +34,8 @@ public abstract class GameCharacter {
     public abstract void attack();
     public void attack(GameCharacter gameCharacter) {
         Random random = new Random();
-        gameCharacter.damage(random.nextInt(1,10));
+        int damageLevel = this.level * 10;
+            gameCharacter.damage(random.nextInt(1, damageLevel));
     }
 
 

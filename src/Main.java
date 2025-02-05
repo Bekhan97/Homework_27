@@ -14,11 +14,13 @@ public class Main {
 
         gameCharacters[2].setLevel(5);
 
-        gameCharacters[0].damage(22);
+        gameCharacters[2].damage(22);
         gameCharacters[1].levelUp();
         print(gameCharacters);
 
         attack(gameCharacters);
+        gameCharacters[2].attack(gameCharacters[0]);
+        print(gameCharacters);
     }
 
     private static void attack(GameCharacter[] gameCharacters) {
