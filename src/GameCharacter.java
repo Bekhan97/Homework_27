@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public abstract class GameCharacter {
     private String name;
     private int level; // 0 - 5
@@ -30,6 +32,11 @@ public abstract class GameCharacter {
     }
 
     public abstract void attack();
+    public void attack(GameCharacter gameCharacter) {
+        Random random = new Random();
+        gameCharacter.damage(random.nextInt(1,10));
+    }
+
 
     public String getName() {
         return name;

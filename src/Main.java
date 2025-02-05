@@ -12,6 +12,8 @@ public class Main {
 
         print(gameCharacters);
 
+        gameCharacters[2].setLevel(5);
+
         gameCharacters[0].damage(22);
         gameCharacters[1].levelUp();
         print(gameCharacters);
