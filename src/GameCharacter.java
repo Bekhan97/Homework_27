@@ -1,11 +1,43 @@
 public abstract class GameCharacter {
     private String name;
-    private int level = 0; // 0 - 5
-    private int health = 100;
+    private int level; // 0 - 5
+    private double health; //100
 
-    public GameCharacter(String name, int level, int health) {
+    public GameCharacter(String name) {
         this.name = name;
+        this.level = 0;
+        this.health = 100;
+    }
+
+    public GameCharacter(String name, int level, double health) {
+        this.name = name;
+        if (level < 0 || level > 5) {
+            throw new IllegalArgumentException("Level must be 0-5");
+        }
         this.level = level;
+        if (health < 0 || health > 100) {
+            throw new IllegalArgumentException("Health must be 0-100%");
+        }
+        this.health = health;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public double getHealth() {
+        return health;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
+    }
+
+    public void setHealth(double health) {
         this.health = health;
     }
 
